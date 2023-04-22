@@ -1,25 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import QuoteBox from "./components/QuoteBox";
+import q from "./data/quotes.json";
+
+export type Quote = {
+  quote: string;
+  author: string;
+};
 
 function App() {
+  const quotes = q.quotes;
+  const [quote, setQuote] = useState<Quote>(quotes[0]);
+  const getQuote = () =>
+    setQuote(quotes[Math.floor(Math.random() * quotes.length)]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="App">
+      <QuoteBox quote={quote} getQuote={getQuote} />
+    </main>
   );
 }
 

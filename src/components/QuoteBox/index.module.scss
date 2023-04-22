@@ -1,0 +1,53 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  gap: 3px;
+  background-color: white;
+  color: rgb(22, 160, 133);
+  border-radius: 0.5em;
+  padding: 40px 50px;
+  font-size: 1em;
+
+  & > * {
+    width: 100%;
+  }
+  .text {
+    display: flex;
+    text-align: center;
+    font-weight: 500;
+
+    & > span {
+      margin-right: 10px;
+      font-size: 1.75em;
+      font-weight: 500;
+      & > :nth-child(1) {
+        margin-right: 10px;
+      }
+    }
+  }
+  .author {
+    text-align: end;
+    padding-top: 20px;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-top: 35px;
+  }
+  .quoteTweet {
+    display: flex;
+    gap: 5px;
+  }
+}
+
+.footer {
+  width: 450px;
+  text-align: center;
+  display: block;
+  margin: 15px auto 30px auto;
+  font-size: 0.8em;
+  color: #fff;
+}
