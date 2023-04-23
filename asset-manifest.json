@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/fcc-task-1/static/css/main.edf6af37.css",
+    "main.js": "/fcc-task-1/static/js/main.9ff9f9d6.js",
+    "index.html": "/fcc-task-1/index.html",
+    "main.edf6af37.css.map": "/fcc-task-1/static/css/main.edf6af37.css.map",
+    "main.9ff9f9d6.js.map": "/fcc-task-1/static/js/main.9ff9f9d6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.edf6af37.css",
+    "static/js/main.9ff9f9d6.js"
+  ]
+}
