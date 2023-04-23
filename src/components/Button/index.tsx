@@ -2,18 +2,28 @@ import styles from "./index.module.scss";
 type Props = {
   children: React.ReactNode;
   onClick: VoidFunction;
-  link?: boolean;
+  link?: string;
+  color?: string;
+  id: string;
 };
-const Button = ({ children, onClick, link }: Props) => {
+const Button = ({ children, color, onClick, link, id }: Props) => {
   if (link)
     return (
-      <a className={styles.link} onClick={onClick} href="dkdkd">
+      <a
+        className={styles.link}
+        onClick={onClick}
+        id={id}
+        color={color}
+        href={link}
+        target="_blank"
+        rel="noreferrer"
+      >
         {children}
       </a>
     );
 
   return (
-    <button className={styles.button} onClick={onClick}>
+    <button className={styles.button} color={color} id={id} onClick={onClick}>
       {children}
     </button>
   );

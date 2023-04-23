@@ -2,9 +2,28 @@
 :root {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
+  --color1: rgb(22, 160, 133);
+  --color2: rgb(44, 62, 80);
+  --color3: rgb(243, 156, 18);
+  transition: all 1s;
 }
 
+* {
+  transition: all 1s;
+}
+
+*[color="1"] {
+  background-color: var(--color1);
+  color: var(--color1);
+}
+*[color="2"] {
+  background-color: var(--color2);
+  color: var(--color2);
+}
+*[color="3"] {
+  background-color: var(--color3);
+  color: var(--color3);
+}
 body {
   margin: 0;
-  background-color: rgb(22, 160, 133);
 }
